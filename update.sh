@@ -8,6 +8,9 @@ URL=$(
   | jq -r '.assets[0].browser_download_url'
 )
 
+# Delete old file
+find ./ -name "JMusicBot-*.*.*.jar" -delete
+
 # Download file
 wget -nv $URL
 
